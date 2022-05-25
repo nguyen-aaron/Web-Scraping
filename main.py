@@ -6,9 +6,9 @@ def getValue(url):
 
   soup = BeautifulSoup(page.content, "html.parser") #scrape for content
 
-  #results = soup.find("fin-streamer", class_ = "Fw(b) Fz(36px) Mb(-4px) D(ib)")
-  #print(results.prettify())
-  #results = soup.find("h1", class_ = "D(ib) Fz(18px)")
+  #results = soup.find("fin-streamer", class_ = "Fw(b) Fz(36px) Mb(-4px) D(ib)") #find specific class name on page, this class contains info for price
+  #print(results.prettify()) 
+  #results = soup.find("h1", class_ = "D(ib) Fz(18px)") #find specific class name on page, this class contains info for name
   #print(results.prettify())
 
   findNameOfItem = [a.text for a in soup.select_one('h1')] #find the text in specific h1

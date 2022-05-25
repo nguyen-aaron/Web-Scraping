@@ -19,7 +19,7 @@ def getValue(url):
   index = stringOfItem.index("(") #use indexing to find the end of name of item
   nameOfItem = stringOfItem[2:index -1] #clean up name of item, get rid of outer parenthesis and quotes
   valueOfItem = soup.select_one('fin-streamer[data-test="qsp-price"]')["value"]
-  print("The price of",nameOfItem,"is",valueOfItem) #print out name and value
+  print("The price of",nameOfItem,"is",valueOfItem,".") #print out name and value
 
 #examples
 getValue("https://finance.yahoo.com/quote/BTC-USD/")

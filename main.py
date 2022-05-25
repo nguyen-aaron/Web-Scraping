@@ -1,7 +1,10 @@
 from bs4 import BeautifulSoup
 import requests
 
+#webscrape Yahoo for name and price of stocks
+
 def getValue(url):
+  
   page = requests.get(url) #get page
 
   soup = BeautifulSoup(page.content, "html.parser") #scrape for content
@@ -23,3 +26,4 @@ getValue("https://finance.yahoo.com/quote/BTC-USD/")
 getValue("https://finance.yahoo.com/quote/GOOG/")
 getValue("https://finance.yahoo.com/quote/%5EGSPC?p=%5EGSPC")
 getValue("https://finance.yahoo.com/quote/GME?p=GME&.tsrc=fin-srch")
+getValue("https://finance.yahoo.com/quote/TSLA/")
